@@ -1,13 +1,127 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+body {
+  background-color: lightgray;
+}
+.section-center {
+margin: 0 auto;
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+ width: calc(80% - 10px);
+ grid-gap: 4rem 8rem;
+ 
+}
+
+.section > * {
+  margin-bottom: 50px;
+}
+
+
+
+
+.menu-item {
+  box-sizing: border-box;
+  display: flex;
+  gap: 30px;
+  width: 110%;
+  height: 120%;
+ padding: 10px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+ }
+
+.photo {
+  width: 38%;
+  border: 2px solid goldenrod; 
+  object-fit: cover;
+  /* border: 3px solid rgb(209, 140, 13); */
+}
+
+.title h2 {
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  
+  animation: slidleft 1s  0.2s ;
+}
+.underline{
+  width: 170px;
+  border-bottom: 4px solid rgb(188, 126, 10);
+ position: absolute;
+ top: 90px;
+ left: 670px;
+ animation: slidleft 1s  0.5s ;
+ margin: 50px auto;
+}
+
+.item-info {
+  line-height: 1.5;
+  
+}
+header{
+  display: flex;
+  justify-content: space-around;
+}
+.price {
+  color: rgb(210, 16, 16);
+  font-size: 1.3rem;
+}
+
+.sub-header {
+  color: rgb(81, 22, 105);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.item-text {
+  color: #2e2b2b;
+  font-weight: 500;
+}
+
+.btn-container{
+  text-align: center;
+ 
+
+}
+
+.filter-btn{
+  /* background-color: goldenrod; */
+  background-color: rgb(244, 226, 204);
+  padding: 6px 8px;
+  /* color: lightgrey; */
+  /* border: 2px   solid rgb(209, 140, 13) ; */
+  outline: none;
+  border: none;
+ font-size: 1rem;
+ /* font-weight: 800; */
+  text-transform: capitalize;
+  margin: 0 0 50px 20px;
+  transition: ease-in 0.5s;
+}
+
+
+.filter-btn:hover{
+  background-color: goldenrod;
+}
+
+@keyframes slidleft {
+  0%{
+    transform: translate(300px);
+  }
 }
